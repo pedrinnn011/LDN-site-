@@ -1,68 +1,57 @@
-<!DOCTYPE html><html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LDN-ESPORTES</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #0f0f0f;
-      color: #fff;
-      text-align: center;
-    }
-    header {
-      background-color: #1a1a1a;
-      padding: 20px;
-    }
-    header img {
-      width: 150px;
-    }
-    h1 {
-      font-size: 2.5rem;
-      margin: 10px 0;
-    }
-    .slogan {
-      font-size: 1.2rem;
-      color: #f97316;
-    }
-    .links {
-      margin: 30px 0;
-    }
-    .links a {
-      display: inline-block;
-      margin: 10px;
-      padding: 12px 20px;
-      background-color: #f97316;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 10px;
-      transition: background 0.3s;
-    }
-    .links a:hover {
-      background-color: #ea580c;
-    }
-    footer {
-      margin-top: 50px;
-      padding: 10px;
-      background-color: #1a1a1a;
-      color: #aaa;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <img src="logo_ldn.jpg" alt="Logo LDN Esportes">
-    <h1>LDN-ESPORTES</h1>
-    <p class="slogan">Somos LDN, dominamos o lobby!</p>
-  </header>  <main>
-    <section class="links">
-      <h2>Entre para a Guilda</h2>
-      <a href="https://chat.whatsapp.com/FAYY5GOBsqRLDdQGdacI56" target="_blank">Grupo de Espera (WhatsApp)</a>
-      <a href="https://www.instagram.com/ldn_esportes.ofc?igsh=MWM4YWZ5d3VxZWY5YQ==" target="_blank">Instagram Oficial</a>
-    </section>
-  </main>  <footer>
-    <p>&copy; 2025 LDN-ESPORTES. Todos os direitos reservados.</p>
-  </footer>
-</body>
-      </html>
+import { motion } from "framer-motion"; import { Card, CardContent } from "@/components/ui/card";
+
+export default function Home() { return ( <div className="min-h-screen bg-black text-white font-sans"> {/* Hero Section */} <section className="flex flex-col items-center justify-center text-center px-4 py-20"> <motion.img src="/logo-ldn.png" // Certifique-se de que a logo esteja na pasta public com esse nome alt="LDN Esportes Logo" initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ duration: 1 }} className="w-64 sm:w-96 drop-shadow-[0_0_20px_rgba(255,80,0,0.7)]" /> <h1 className="mt-10 text-4xl sm:text-6xl font-bold text-orange-500"> LDN-ESPORTES </h1> <p className="mt-4 text-lg sm:text-xl text-gray-300 max-w-xl"> Onde as Lendas se tornam Imortais. </p> </section>
+
+{/* Sobre a Guilda */}
+  <section className="px-6 py-16 bg-gradient-to-b from-black to-gray-900">
+    <h2 className="text-3xl font-bold text-center text-orange-400 mb-10">
+      Sobre a LDN
+    </h2>
+    <p className="max-w-3xl mx-auto text-center text-gray-300">
+      Somos uma guilda nível 7, referência em Free Fire e outros jogos competitivos. Nosso time é formado por jogadores comprometidos com a vitória, disciplina e espírito de equipe.
+    </p>
+  </section>
+
+  {/* Membros */}
+  <section className="px-6 py-16">
+    <h2 className="text-3xl font-bold text-center text-orange-400 mb-10">
+      Membros em Destaque
+    </h2>
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+      {["LDN Drake", "LDN Killer", "LDN Shadow"].map((name, index) => (
+        <Card key={index} className="bg-gray-800 border border-gray-700 shadow-lg rounded-2xl">
+          <CardContent className="p-6">
+            <h3 className="text-xl font-semibold text-orange-300">{name}</h3>
+            <p className="text-gray-400 text-sm mt-2">Jogador Profissional</p>
+          </CardContent>
+        </Card>
+      ))}
+    </div>
+  </section>
+
+  {/* Contato */}
+  <section className="px-6 py-16 bg-gray-950 text-center">
+    <h2 className="text-3xl font-bold text-orange-400 mb-4">Entre em Contato</h2>
+    <p className="text-gray-400 mb-6">
+      Quer fazer parte da LDN ou entrar em contato para parcerias?
+    </p>
+    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+      <a
+        href="https://www.instagram.com/ldn_esportes.ofc?igsh=MWM4YWZ5d3VxZWY5YQ=="
+        target="_blank"
+        className="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-xl transition duration-300"
+      >
+        Instagram Oficial
+      </a>
+      <a
+        href="https://chat.whatsapp.com/FAYY5GOBsqRLDdQGdacI56"
+        target="_blank"
+        className="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-xl transition duration-300"
+      >
+        Entrar no Grupo do WhatsApp
+      </a>
+    </div>
+  </section>
+</div>
+
+); }
