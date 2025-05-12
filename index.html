@@ -1,57 +1,81 @@
-import { motion } from "framer-motion"; import { Card, CardContent } from "@/components/ui/card";
-
-export default function Home() { return ( <div className="min-h-screen bg-black text-white font-sans"> {/* Hero Section */} <section className="flex flex-col items-center justify-center text-center px-4 py-20"> <motion.img src="/logo-ldn.png" // Certifique-se de que a logo esteja na pasta public com esse nome alt="LDN Esportes Logo" initial={{ scale: 0.8, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={{ duration: 1 }} className="w-64 sm:w-96 drop-shadow-[0_0_20px_rgba(255,80,0,0.7)]" /> <h1 className="mt-10 text-4xl sm:text-6xl font-bold text-orange-500"> LDN-ESPORTES </h1> <p className="mt-4 text-lg sm:text-xl text-gray-300 max-w-xl"> Onde as Lendas se tornam Imortais. </p> </section>
-
-{/* Sobre a Guilda */}
-  <section className="px-6 py-16 bg-gradient-to-b from-black to-gray-900">
-    <h2 className="text-3xl font-bold text-center text-orange-400 mb-10">
-      Sobre a LDN
-    </h2>
-    <p className="max-w-3xl mx-auto text-center text-gray-300">
-      Somos uma guilda nível 7, referência em Free Fire e outros jogos competitivos. Nosso time é formado por jogadores comprometidos com a vitória, disciplina e espírito de equipe.
-    </p>
-  </section>
-
-  {/* Membros */}
-  <section className="px-6 py-16">
-    <h2 className="text-3xl font-bold text-center text-orange-400 mb-10">
-      Membros em Destaque
-    </h2>
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-      {["LDN Drake", "LDN Killer", "LDN Shadow"].map((name, index) => (
-        <Card key={index} className="bg-gray-800 border border-gray-700 shadow-lg rounded-2xl">
-          <CardContent className="p-6">
-            <h3 className="text-xl font-semibold text-orange-300">{name}</h3>
-            <p className="text-gray-400 text-sm mt-2">Jogador Profissional</p>
-          </CardContent>
-        </Card>
-      ))}
+<!DOCTYPE html><html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LDN ESPORTES</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: #0d0d0d;
+      color: #fff;
+    }
+    header {
+      background: linear-gradient(to right, #ff0000, #550000);
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #ddd;
+    }
+    section {
+      padding: 50px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      font-size: 2rem;
+      border-left: 5px solid red;
+      padding-left: 10px;
+    }
+    .social-links {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .social-links a {
+      color: #fff;
+      background: #ff0000;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .social-links a:hover {
+      background: #aa0000;
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #111;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>LDN ESPORTES</h1>
+    <p>Domínio. Honra. Competição.</p>
+  </header>  <section>
+    <h2>Sobre Nós</h2>
+    <p>A LDN é uma guilda focada em excelência competitiva. Unidos pela paixão pelos eSports, treinamos, evoluímos e vencemos como um só. Nossa jornada é marcada por superação, amizade e respeito dentro e fora das arenas virtuais.</p>
+  </section>  <section>
+    <h2>Redes Sociais</h2>
+    <div class="social-links">
+      <a href="#" target="_blank">Instagram</a>
+      <a href="#" target="_blank">WhatsApp</a>
+      <a href="#" target="_blank">Discord</a>
     </div>
-  </section>
-
-  {/* Contato */}
-  <section className="px-6 py-16 bg-gray-950 text-center">
-    <h2 className="text-3xl font-bold text-orange-400 mb-4">Entre em Contato</h2>
-    <p className="text-gray-400 mb-6">
-      Quer fazer parte da LDN ou entrar em contato para parcerias?
-    </p>
-    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-      <a
-        href="https://www.instagram.com/ldn_esportes.ofc?igsh=MWM4YWZ5d3VxZWY5YQ=="
-        target="_blank"
-        className="inline-block bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-xl transition duration-300"
-      >
-        Instagram Oficial
-      </a>
-      <a
-        href="https://chat.whatsapp.com/FAYY5GOBsqRLDdQGdacI56"
-        target="_blank"
-        className="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-xl transition duration-300"
-      >
-        Entrar no Grupo do WhatsApp
-      </a>
-    </div>
-  </section>
-</div>
-
-); }
+  </section>  <footer>
+    &copy; 2025 LDN ESPORTES. Todos os direitos reservados.
+  </footer>
+</body>
+</html>
