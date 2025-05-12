@@ -1,99 +1,117 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>LDN ESPORTES</title>
   <style>
     body {
-      background-color: #1a1a1a;
-      color: #fff3e6;
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #000;
+      color: white;
       text-align: center;
     }
 
     header {
-      background-color: #ff6600;
-      padding: 20px 0;
+      background: linear-gradient(to right, #ff8000, #ff6600);
+      padding: 40px 10px 20px;
     }
 
     header h1 {
-      color: #1a1a1a;
+      font-size: 40px;
       margin: 0;
-      font-size: 36px;
-    }
-
-    main {
-      padding: 40px 20px;
-    }
-
-    h2 {
-      color: #ffa64d;
-      margin-top: 40px;
-    }
-
-    p {
-      max-width: 700px;
-      margin: 0 auto;
-      font-size: 18px;
-      line-height: 1.6;
-    }
-
-    .redes-sociais {
-      margin-top: 30px;
-    }
-
-    .botao {
-      display: inline-block;
-      background-color: #ff6600;
-      color: #fff;
-      padding: 12px 24px;
-      margin: 10px;
-      border-radius: 8px;
       font-weight: bold;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
     }
 
-    .botao:hover {
+    header h2 {
+      margin: 10px 0 0;
+      font-weight: normal;
+      font-size: 18px;
+      color: #f0f0f0;
+    }
+
+    section {
+      padding: 40px 20px 20px;
+      text-align: left;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    section h2 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      position: relative;
+      padding-left: 15px;
+    }
+
+    section h2::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 5px;
+      width: 5px;
+      height: 90%;
+      background-color: #ff6600;
+    }
+
+    section p {
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .redes {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .redes a {
+      background-color: #ff6600;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      min-width: 120px;
+      transition: background 0.3s;
+    }
+
+    .redes a:hover {
       background-color: #e65c00;
     }
 
     footer {
-      background-color: #111;
+      margin-top: 40px;
       padding: 20px;
-      color: #999;
       font-size: 14px;
-      margin-top: 50px;
+      color: #999;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>LDN ESPORTES</h1>
+    <h1>LDN<br>ESPORTES</h1>
+    <h2>Domínio. Honra. Competição.</h2>
   </header>
 
-  <main>
-    <h2>Domínio. Honra. Competição.</h2>
-
+  <section>
     <h2>Sobre Nós</h2>
     <p>
       A LDN é uma guilda focada em excelência competitiva. Unidos pela paixão pelos eSports, treinamos, evoluímos e vencemos como um só.
       Nossa jornada é marcada por superação, amizade e respeito dentro e fora das arenas virtuais.
     </p>
+  </section>
 
+  <section>
     <h2>Redes Sociais</h2>
-    <div class="redes-sociais">
-      <a href="https://chat.whatsapp.com/FAYY5GOBsqRLDdQGdacI56" class="botao" target="_blank">WhatsApp</a>
-      <a href="https://www.instagram.com/ldn_esportes.ofc?igsh=MWxmaXVuN2NlcndxNQ==" class="botao" target="_blank">Instagram</a>
+    <div class="redes">
+      <a href="https://www.instagram.com/ldn_esportes.ofc?igsh=MWxmaXVuN2NlcndxNQ==" target="_blank">Instagram</a>
+      <a href="https://chat.whatsapp.com/FAYY5GOBsqRLDdQGdacI56" target="_blank">WhatsApp</a>
     </div>
-  </main>
+  </section>
 
-  <footer>
-    © 2025 LDN ESPORTES. Todos os direitos reservados.
-  </footer>
-
-</body>
-</html>
+  <
